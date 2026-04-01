@@ -1,0 +1,137 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About - MNotesHub</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+  <a href="index.html">Home</a>
+  <a href="notes.html">Notes</a>
+  <a href="mcq.html">MCQ</a>
+  <a href="mock.html">Mock Test</a>
+  <a href="about.html">About Us</a>
+</div>
+
+<!-- Navbar -->
+<div class="navbar">
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <div class="logo">
+    <img src="logo.png" alt="logo">
+    <h2>MNotesHub</h2>
+  </div>
+
+  <div class="nav-right">
+    <button id="themeToggle">🌙</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>About MNotesHub</h1>
+  <p>Built by students, for students</p>
+</section>
+
+<!-- OUR STORY -->
+<section class="section">
+  <h2>Our Story</h2>
+  <p>
+    MNotesHub started with a simple idea -- students need better, clearer, and more accessible study resources.
+    We noticed that many notes online were either too complicated or incomplete, so we decided to build a platform
+    that focuses on simplicity, clarity, and real exam preparation.
+  </p>
+</section>
+
+<!-- FOUNDERS -->
+<section class="section alt">
+  <h2>Our Founders</h2>
+
+  <div class="features">
+
+    <div class="founder-card">
+      <img src="your-photo.jpg" alt="Founder">
+      <h3>Rewardking Thongni</h3>
+      <p>Co-Founder</p>
+      <p>Cheif Technical Officer</p>
+    </div>
+
+    <div class="founder-card">
+      <img src="cofounder.jpg" alt="Co-Founder">
+      <h3>Co-Founder Name</h3>
+      <p>Co-Founder</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTRIBUTORS -->
+<section class="section">
+  <h2>Our Contributors</h2>
+
+  <div class="features">
+    <div class="card">
+      <h3>Teacher Name</h3>
+      <p>Provided study notes</p>
+    </div>
+
+    <div class="card">
+      <h3>Student Name</h3>
+      <p>Helped with MCQs</p>
+    </div>
+
+    <div class="card">
+      <h3>Contributor Name</h3>
+      <p>Content support</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section alt">
+  <h2>Contact Us</h2>
+  <p>📞 +91 9863149794</p>
+  <p>📧 meghalayanoteshub@gmail.com</p>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 MNotesHub. All rights reserved.</p>
+  <p>Mawkyrwat,South West Khasi Hills,Meghalaya</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  let sidebar = document.getElementById("sidebar");
+  sidebar.style.left = (sidebar.style.left === "0px") ? "-260px" : "0px";
+}
+
+/* Dark Mode */
+const toggleBtn = document.getElementById("themeToggle");
+
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark");
+  toggleBtn.textContent = "☀️";
+}
+
+toggleBtn.onclick = () => {
+  document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+    toggleBtn.textContent = "☀️";
+  } else {
+    localStorage.setItem("theme", "light");
+    toggleBtn.textContent = "🌙";
+  }
+};
+</script>
+
+</body>
+</html>

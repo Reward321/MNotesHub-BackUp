@@ -1,0 +1,96 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MNotesHub</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="notes.html">Notes</a>
+    <a href="mcq.html">MCQ</a>
+    <a href="mock.html">Mock Test</a>
+    <a href="about.html">About Us</a>
+</div>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <div class="logo">
+        <img src="logo.png" alt="logo">
+        <h2>MNotesHub</h2>
+    </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+    <h1>Empowering Student With Free Education</h1>
+    <p>A platform just for you </p>
+</section>
+
+<!-- Welcome -->
+<section class="section">
+    <h2>Welcome to MNotesHub</h2>
+    <p>Access high-quality notes, MCQs, and mock tests designed to help you succeed.</p>
+</section>
+
+<!-- Features -->
+<section class="section box-container">
+    <div class="box">
+        <h3>35+</h3>
+        <p>Chapters</p>
+    </div>
+    <div class="box">
+        <h3>3+</h3>
+        <p>Subjects</p>
+    </div>
+    <div class="box">
+        <h3>Daily</h3>
+        <p>Quiz</p>
+    </div>
+    <div class="box">
+        <h3>NEET/JEE mock test</h3>
+        <p>Your free online mock test</p>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section">
+    <h2>What People Say</h2>
+    <div class="testimonials">
+        <div class="box"><i>"This platform help me alot i'm so proud our senior build platform,i wish them the best"</i><b>~Phibalari Lyngkhoi</b></div>
+        <div class="box"><i>"The mock test and notes are awesome,especially for student who study by themselves for JEE and NEET tne online mock test is awesome"</i><b>~Victor Lyngdoh</b></div>    
+        <div class="box"><i>"MNotesHub is a best platform,and i'm proud that our student build this,i wish our student the very best in their endeavour"</i><b>~Sylvania Lyngkhoi,Lecturer(Chemistry),Maharam Government Higher Secomdary School,Mawkyrwat</b></div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="section">
+    <h2>Contact Us</h2>
+    <p>📞 +91 9863149794</p>
+    <p>📧meghalayanoteshub@gmail.com</p>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>© 2026 MNotesHub. All rights reserved.</p>
+    <p>Mawkyrwat,South West Khasi Hills District,Meghalaya</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    let sidebar = document.getElementById("sidebar");
+    sidebar.style.left = (sidebar.style.left === "0px") ? "-260px" : "0px";
+}
+</script>
+
+</body>
+</html>
+
