@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MNotesHub</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="notes.html">Learning</a>
+    <a href="about.html">About Us</a>
+    <a href="#">Contact Us</a>
+    <a href="privacy">Privacy Policy</a>
+</div>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <div class="logo">
+        <img src="logo.png" alt="logo">
+        <h2>MNotesHub</h2>
+    </div>
+</div>
+
+<!-- DAILY QUIZ -->
+<section class="section">
+    <h2>🔥 Daily Quiz</h2>
+    <div class="subjects">
+
+        <div class="card physics" onclick="location.href='MCQ/physicsmcq.html'">
+            <h2>Daily Quiz</h2>
+            <p>Test your daily concepts</p>
+            </div>
+</section>
+
+<!-- NOTES SECTION -->
+<section class="section">
+    <h2>📘 Notes</h2>
+    <div class="subjects">
+
+        <div class="card physics" onclick="location.href='PNotes/physics.html'">
+            <h2>Physics</h2>
+            <p>Concepts, formulas, numericals</p>
+        </div>
+
+        <div class="card chemistry" onclick="location.href='CNotes/chemistry.html'">
+            <h2>Chemistry</h2>
+            <p>Organic, inorganic & physical</p>
+        </div>
+
+        <div class="card biology" onclick="location.href='BNotes/biology.html'">
+            <h2>Biology</h2>
+            <p>Diagrams, theory & explanations</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- MCQ SECTION -->
+<section class="section">
+    <h2>📝 MCQ Practice</h2>
+    <div class="subjects">
+
+        <div class="card physics" onclick="location.href='MCQ/physicsmcq.html'">
+            <h2>Physics MCQ</h2>
+        </div>
+
+        <div class="card chemistry" onclick="location.href='MCQ/chemistrymcq.html'">
+            <h2>Chemistry MCQ</h2>
+        </div>
+
+        <div class="card biology" onclick="location.href='MCQ/biologymcq.html'">
+            <h2>Biology MCQ</h2>
+        </div>
+
+    </div>
+</section>
+
+<!-- MOCK TEST SECTION -->
+<section class="section">
+    <h2>🎯 Mock Tests</h2>
+    <div class="subjects">
+
+        <div class="card jee" onclick="location.href='Jee/jee.html'">
+            <h2>JEE Mock Test</h2>
+            <p>Full length + subject wise</p>
+        </div>
+
+        <div class="card neet" onclick="location.href='Neet/neet.html'">
+            <h2>NEET Mock Test</h2>
+            <p>Practice for real exam</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>© 2026 MNotesHub. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    let sidebar = document.getElementById("sidebar");
+    sidebar.style.left = (sidebar.style.left === "0px") ? "-260px" : "0px";
+}
+</script>
+
+</body>
+</html>
