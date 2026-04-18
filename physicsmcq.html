@@ -1,0 +1,347 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics MCQ - MNotesHub</title>
+
+  <!-- Use MAIN CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+  <a href="index.html">Home</a>
+  <a href="notes.html">Notes</a>
+  <a href="mcq.html">MCQ</a>
+  <a href="mock.html">Mock Test</a>
+  <a href="about.html">About Us</a>
+</div>
+
+<!-- Navbar -->
+<div class="navbar">
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <div class="logo">
+    <img src="logo.png" alt="logo">
+    <h2>MNotesHub</h2>
+  </div>
+
+  <!-- Dark mode toggle -->
+  <div class="nav-right">
+    <button id="themeToggle">🌙</button>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header">
+  <h1>Physics MCQ Test</h1>
+  <p>Practice questions and test your knowledge</p>
+</header>
+
+<!-- Search -->
+<div class="search-box">
+  <input type="text" placeholder="Search questions...">
+</div>
+
+<!-- Quiz Container (IMPORTANT: keep this same for JS) -->
+<div id="quiz-container"></div>
+
+<!-- Scripts -->
+<script src="physicsmcq.js"></script>
+
+<script>
+/* Hamburger */
+function toggleMenu() {
+  let sidebar = document.getElementById("sidebar");
+  sidebar.style.left = (sidebar.style.left === "0px") ? "-260px" : "0px";
+}
+
+/* Dark Mode */
+const toggleBtn = document.getElementById("themeToggle");
+
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark");
+  toggleBtn.textContent = "☀️";
+}
+
+toggleBtn.onclick = () => {
+  document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+    toggleBtn.textContent = "☀️";
+  } else {
+    localStorage.setItem("theme", "light");
+    toggleBtn.textContent = "🌙";
+  }
+};
+</script>
+
+</body>
+</html><script>const quizData = {
+
+ElectricCharges:[
+{question:"Two identical conducting spheres with +Q and –Q are connected. Final charge:",options:["+Q, –Q","Zero, Zero","+Q/2, –Q/2","Depends"],correct:1},
+{question:"Flux through one face of cube with charge q at center:",options:["q/ε₀","q/6ε₀","q/4ε₀","Zero"],correct:1},
+{question:"Electric field due to dipole varies as:",options:["1/r","1/r²","1/r³","Constant"],correct:2},
+{question:"Electric flux depends on:",options:["Area","Shape","Enclosed charge","Distance"],correct:2},
+{question:"Field inside conductor:",options:["Zero","Max","Infinite","Variable"],correct:0},
+{question:"Dipole torque max at:",options:["0°","45°","90°","180°"],correct:2},
+{question:"Field lines never:",options:["Start","End","Intersect","Curve"],correct:2},
+{question:"Coulomb force varies as:",options:["r","r²","1/r²","1/r"],correct:2},
+{question:"Net force on charges in equilateral triangle:",options:["Zero","Along bisector","Along side","Perpendicular"],correct:1},
+{question:"Electric field unit:",options:["N/C","Volt","Joule","Amp"],correct:0}
+],
+
+Electrostatics:[
+{question:"Potential is scalar because:",options:["No direction","No magnitude","No charge","No energy"],correct:0},
+{question:"Equipotential surfaces are:",options:["Parallel","Perpendicular to field","Circular","Random"],correct:1},
+{question:"Work on equipotential:",options:["Zero","Max","Infinite","Variable"],correct:0},
+{question:"Capacitance depends on:",options:["Charge","Voltage","Geometry","Time"],correct:2},
+{question:"Parallel plate C ∝",options:["d","1/d","d²","√d"],correct:1},
+{question:"Energy stored:",options:["CV²","½CV²","qV","q²"],correct:1},
+{question:"Dielectric increases:",options:["Voltage","Resistance","Capacitance","Current"],correct:2},
+{question:"Series capacitors →",options:["Max","Min","Infinite","Zero"],correct:1},
+{question:"Potential due to dipole ∝",options:["1/r²","1/r³","1/r","r²"],correct:0},
+{question:"Electric potential unit:",options:["Joule","Volt","Amp","Ohm"],correct:1}
+],
+
+CurrentElectricity:[
+{question:"Ohm's law valid when:",options:["Temp constant","Pressure constant","High voltage","High current"],correct:0},
+{question:"Drift velocity ∝",options:["E","1/E","E²","Constant"],correct:0},
+{question:"Resistance depends on:",options:["Length","Area","Material","All"],correct:3},
+{question:"Resistivity unit:",options:["Ωm","Ω","Volt","Amp"],correct:0},
+{question:"Kirchhoff law based on:",options:["Energy","Charge conservation","Force","Motion"],correct:1},
+{question:"Wheatstone balance:",options:["P/Q = R/S","P+Q = R+S","P = R","Q = S"],correct:0},
+{question:"Temp ↑ → resistance:",options:["↓","↑","Same","Zero"],correct:1},
+{question:"Power formula:",options:["VI","I²R","V²/R","All"],correct:3},
+{question:"EMF vs voltage:",options:["Same","Different","Zero","Opposite"],correct:1},
+{question:"Internal resistance affects:",options:["Current","Voltage","Both","None"],correct:2}
+],
+
+MovingCharges:[
+{question:"Magnetic force:",options:["qE","qvB sinθ","qB","vE"],correct:1},
+{question:"Charged particle path in uniform B:",options:["Straight","Circular","Parabolic","Static"],correct:1},
+{question:"Radius ∝",options:["v","1/v","B","q"],correct:0},
+{question:"Ampere law used for:",options:["Electric field","Magnetic field","Charge","Energy"],correct:1},
+{question:"Force on current conductor:",options:["BIL","qvB","VI","IR"],correct:0},
+{question:"Cyclotron works on:",options:["Electric","Magnetic","Both","None"],correct:2},
+{question:"Lorentz force includes:",options:["Electric","Magnetic","Both","None"],correct:2},
+{question:"Parallel currents same direction:",options:["Repel","Attract","Zero","Infinite"],correct:1},
+{question:"Torque on loop:",options:["nBIA","BI","IA","B²"],correct:0},
+{question:"Biot-Savart law gives:",options:["Field","Force","Energy","Power"],correct:0}
+],
+
+Magnetism:[
+{question:"Dipole moment:",options:["IA","I/A","A/I","None"],correct:0},
+{question:"Bar magnet behaves as:",options:["Dipole","Charge","Wave","Field"],correct:0},
+{question:"Diamagnetic materials:",options:["Weak repulsion","Strong attraction","Strong repulsion","None"],correct:0},
+{question:"Paramagnetic:",options:["Weak attraction","Strong repulsion","Zero","Infinite"],correct:0},
+{question:"Ferromagnetic:",options:["Weak","Strong","Zero","Random"],correct:1},
+{question:"Hysteresis shows:",options:["Energy loss","Voltage","Current","Charge"],correct:0},
+{question:"Earth behaves as:",options:["Dipole","Monopole","Current","Charge"],correct:0},
+{question:"Field lines are:",options:["Closed","Open","Parallel","Infinite"],correct:0},
+{question:"Unit of B:",options:["Tesla","Volt","Amp","Ohm"],correct:0},
+{question:"Permeability unit:",options:["H/m","N/A²","Both","None"],correct:2}
+],
+
+EMI:[
+{question:"Faraday law:",options:["emf ∝ dΦ/dt","emf ∝ Φ","Constant","Zero"],correct:0},
+{question:"Lenz law gives:",options:["Direction","Magnitude","Speed","Charge"],correct:0},
+{question:"Induced emf unit:",options:["Volt","Amp","Ohm","Tesla"],correct:0},
+{question:"Self inductance unit:",options:["Henry","Tesla","Volt","Amp"],correct:0},
+{question:"Mutual inductance depends on:",options:["Coils","Distance","Medium","All"],correct:3},
+{question:"Flux =",options:["BA cosθ","BA","B/A","A/B"],correct:0},
+{question:"Generator works on:",options:["EMI","Static","Heat","Motion"],correct:0},
+{question:"Eddy currents cause:",options:["Heating","Cooling","Motion","Voltage"],correct:0},
+{question:"Inductor stores:",options:["Magnetic energy","Electric","Heat","None"],correct:0},
+{question:"Lenz law ensures:",options:["Energy conservation","Charge","Motion","Voltage"],correct:0}
+],
+
+AC:[
+{question:"RMS value:",options:["Peak/√2","Peak","2×Peak","Zero"],correct:0},
+{question:"Capacitive reactance ∝",options:["1/f","f","f²","Constant"],correct:0},
+{question:"Inductive reactance ∝",options:["f","1/f","Zero","Constant"],correct:0},
+{question:"Power factor:",options:["cosθ","sinθ","tanθ","secθ"],correct:0},
+{question:"Transformer works on:",options:["EMI","Static","Heat","Charge"],correct:0},
+{question:"Step-up transformer increases:",options:["Voltage","Current","Resistance","Power"],correct:0},
+{question:"Reactance unit:",options:["Ohm","Volt","Amp","Tesla"],correct:0},
+{question:"AC frequency unit:",options:["Hz","Volt","Amp","Joule"],correct:0},
+{question:"Average power:",options:["VI cosθ","VI","V²","I²"],correct:0},
+{question:"LC oscillation due to:",options:["Energy exchange","Charge","Voltage","Current"],correct:0}
+],
+
+EMWaves:[
+{question:"EM waves are:",options:["Transverse","Longitudinal","Both","None"],correct:0},
+{question:"Speed in vacuum:",options:["c","v","u","a"],correct:0},
+{question:"Medium needed:",options:["Yes","No","Sometimes","Depends"],correct:1},
+{question:"Order:",options:["Radio → Gamma","Gamma → Radio","Random","None"],correct:0},
+{question:"X-rays used in:",options:["Imaging","Cooking","Sound","Motion"],correct:0},
+{question:"UV causes:",options:["Skin damage","Cooling","Motion","Charge"],correct:0},
+{question:"Microwaves used in:",options:["Cooking","Lighting","Sound","Charge"],correct:0},
+{question:"Infrared:",options:["Heat","Light","Sound","Charge"],correct:0},
+{question:"EM wave equation:",options:["c = 1/√(μ₀ε₀)","c = v","c = u","None"],correct:0},
+{question:"Energy carried by:",options:["E & B fields","Only E","Only B","None"],correct:0}
+],
+
+RayOptics:[
+{question:"The mirror formula is valid for:",options:["Only convex mirror","Only concave mirror","All spherical mirrors","Plane mirror only"],correct:2},
+{question:"A ray parallel to principal axis after reflection from concave mirror passes through:",options:["Centre of curvature","Focus","Pole","Infinity"],correct:1},
+{question:"Refractive index is defined as:",options:["v/c","c/v","λ/v","vλ"],correct:1},
+{question:"Total internal reflection occurs when light travels:",options:["Rarer → denser","Denser → rarer","Same medium","Vacuum"],correct:1},
+{question:"Critical angle depends on:",options:["Temperature","Wavelength","Refractive index","Distance"],correct:2},
+{question:"Power of lens is:",options:["f","1/f","f²","√f"],correct:1},
+{question:"Unit of power of lens:",options:["m","cm","Diopter","Joule"],correct:2},
+{question:"A convex lens forms virtual image when object is:",options:["Beyond 2F","At F","Between F and O","At infinity"],correct:2},
+{question:"Magnification for mirrors is:",options:["u/v","v/u","uv","v+u"],correct:1},
+{question:"Prism deviation depends on:",options:["Angle of prism","Refractive index","Wavelength","All"],correct:3}
+],
+
+WaveOptics:[
+{question:"Interference occurs due to:",options:["Reflection","Refraction","Superposition","Diffraction"],correct:2},
+{question:"Young's double slit experiment proves:",options:["Particle nature","Wave nature","Charge","Energy"],correct:1},
+{question:"Fringe width is proportional to:",options:["λ","1/λ","d","1/D"],correct:0},
+{question:"Condition for constructive interference:",options:["(2n+1)λ/2","nλ","nλ/2","λ/4"],correct:1},
+{question:"Condition for destructive interference:",options:["nλ","(2n+1)λ/2","λ","2λ"],correct:1},
+{question:"Diffraction is prominent when:",options:["Slit large","Slit small","Slit infinite","No slit"],correct:1},
+{question:"Polarization proves light is:",options:["Longitudinal","Transverse","Particle","Scalar"],correct:1},
+{question:"Central maximum in diffraction is:",options:["Dark","Bright","Zero","Infinite"],correct:1},
+{question:"Coherent sources have:",options:["Same amplitude","Same phase","Same intensity","Same distance"],correct:1},
+{question:"Path difference for bright fringe:",options:["nλ","(2n+1)λ/2","λ/4","Zero"],correct:0}
+],
+
+DualNature:[
+{question:"Photon energy is:",options:["hν","h/ν","ν/h","h²"],correct:0},
+{question:"de Broglie wavelength is:",options:["h/p","p/h","hv","pv"],correct:0},
+{question:"Photoelectric effect proves:",options:["Wave nature","Particle nature","Magnetic nature","Dual nature"],correct:1},
+{question:"Threshold frequency depends on:",options:["Intensity","Material","Voltage","Distance"],correct:1},
+{question:"Stopping potential depends on:",options:["Intensity","Frequency","Area","Distance"],correct:1},
+{question:"Increase in intensity increases:",options:["KE","Current","Frequency","Voltage"],correct:1},
+{question:"Work function is:",options:["Max energy","Min energy","Avg energy","Total energy"],correct:1},
+{question:"Electron shows wave nature when:",options:["Moving","At rest","Accelerated","Heated"],correct:0},
+{question:"Planck constant unit:",options:["Js","J","s","kg"],correct:0},
+{question:"Dual nature applies to:",options:["Light only","Matter only","Both","None"],correct:2}
+],
+
+Atoms:[
+{question:"Bohr model applies to:",options:["All atoms","Hydrogen-like","Metals","Molecules"],correct:1},
+{question:"Radius of orbit ∝",options:["n","n²","1/n","n³"],correct:1},
+{question:"Energy levels are:",options:["Continuous","Discrete","Infinite","Zero"],correct:1},
+{question:"Angular momentum is:",options:["nh","nh/2π","h/n","2πh"],correct:1},
+{question:"Ground state energy is:",options:["Max","Min","Zero","Infinite"],correct:1},
+{question:"Excited state means:",options:["Lower energy","Higher energy","Zero energy","Constant"],correct:1},
+{question:"Spectrum of hydrogen is:",options:["Continuous","Line","Band","Random"],correct:1},
+{question:"Ionization energy is:",options:["Add electron","Remove electron","Move electron","Excite electron"],correct:1},
+{question:"Rydberg constant relates to:",options:["Spectrum","Energy","Charge","Force"],correct:0},
+{question:"Frequency emitted depends on:",options:["Transition","Radius","Charge","Mass"],correct:0}
+],
+
+Nuclei:[
+{question:"Binding energy indicates:",options:["Stability","Instability","Charge","Mass"],correct:0},
+{question:"Half-life is time for:",options:["Full decay","Half decay","No decay","Double decay"],correct:1},
+{question:"Radioactivity is:",options:["Artificial","Spontaneous","Controlled","Forced"],correct:1},
+{question:"α-particle is:",options:["Electron","Proton","Helium nucleus","Photon"],correct:2},
+{question:"β-particle is:",options:["Photon","Electron","Proton","Neutron"],correct:1},
+{question:"γ-rays are:",options:["Particles","EM waves","Sound","Charge"],correct:1},
+{question:"Semiconductor conductivity is:",options:["High","Low","Moderate","Zero"],correct:2},
+{question:"p-type has:",options:["Electrons","Holes","Neutrons","Protons"],correct:1},
+{question:"n-type has:",options:["Holes","Electrons","Both","None"],correct:1},
+{question:"Diode is used for:",options:["Amplification","Rectification","Oscillation","Storage"],correct:1}
+]
+
+};
+
+/* ===== SAME UI LOGIC ===== */
+
+const container = document.getElementById("quiz-container");
+
+Object.keys(quizData).forEach(unit => {
+
+  const unitDiv = document.createElement("div");
+  unitDiv.className = "unit";
+
+  const header = document.createElement("div");
+  header.className = "unit-header";
+  header.textContent = unit;
+
+  const content = document.createElement("div");
+  content.className = "unit-content";
+
+  header.onclick = () => {
+    content.style.display =
+      content.style.display === "block" ? "none" : "block";
+  };
+
+  quizData[unit].forEach((q, index) => {
+
+    const questionDiv = document.createElement("div");
+    questionDiv.className = "question-card";
+
+    const question = document.createElement("p");
+    question.textContent = `${index + 1}. ${q.question}`;
+    questionDiv.appendChild(question);
+
+    q.options.forEach((option, i) => {
+
+      const label = document.createElement("label");
+      label.className = "option";
+
+      const radio = document.createElement("input");
+      radio.type = "radio";
+      radio.name = unit + index;
+      radio.value = i;
+
+      label.appendChild(radio);
+      label.appendChild(document.createTextNode(" " + option));
+
+      questionDiv.appendChild(label);
+    });
+
+    content.appendChild(questionDiv);
+  });
+
+  const submitBtn = document.createElement("button");
+  submitBtn.textContent = "Submit Test";
+
+  const scoreDisplay = document.createElement("div");
+  scoreDisplay.className = "score";
+
+  submitBtn.onclick = () => {
+
+    let score = 0;
+
+    quizData[unit].forEach((q, index) => {
+
+      const radios = document.querySelectorAll(`input[name="${unit + index}"]`);
+      const selected = document.querySelector(`input[name="${unit + index}"]:checked`);
+
+      radios.forEach((radio, i) => {
+        const label = radio.parentElement;
+
+        if (i === q.correct) {
+          label.style.backgroundColor = "#d4edda";
+        }
+
+        if (radio.checked && i !== q.correct) {
+          label.style.backgroundColor = "#f8d7da";
+        }
+      });
+
+      if (selected && parseInt(selected.value) === q.correct) {
+        score++;
+      }
+    });
+
+    scoreDisplay.textContent = `Score: ${score} / ${quizData[unit].length}`;
+  };
+
+  content.appendChild(submitBtn);
+  content.appendChild(scoreDisplay);
+
+  unitDiv.appendChild(header);
+  unitDiv.appendChild(content);
+  container.appendChild(unitDiv);
+});</script>
