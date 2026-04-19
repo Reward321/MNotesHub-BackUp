@@ -1,0 +1,116 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy - MNotesHub</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+  <a href="index.html">Home</a>
+  <a href="notes.html">Notes</a>
+  <a href="mcq.html">MCQ</a>
+  <a href="mock.html">Mock Test</a>
+  <a href="about.html">About Us</a>
+</div>
+
+<!-- Navbar -->
+<div class="navbar">
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <div class="logo">
+    <img src="logo.png" alt="logo">
+    <h2>MNotesHub</h2>
+  </div>
+
+  <div class="nav-right">
+    <button id="themeToggle">🌙</button>
+  </div>
+</div>
+
+<!-- Header -->
+<section class="header">
+  <h1>Privacy Policy</h1>
+  <p>Your privacy and content rights matter to us</p>
+</section>
+
+<!-- POLICY CONTENT -->
+<section class="section">
+
+  <h2>1. No Data Collection</h2>
+  <p>
+    MNotesHub does not collect, store, or share any personal data from users. 
+    You can browse and use all features of the website without providing any personal information.
+  </p>
+
+  <h2>2. Use of Content</h2>
+  <p>
+    All study materials, notes, and content available on MNotesHub belong to their respective rightful owners. 
+    We do not claim ownership unless explicitly stated.
+  </p>
+
+  <h2>3. Educational Purpose</h2>
+  <p>
+    The content on this platform is provided strictly for educational purposes to help students learn and prepare for exams.
+  </p>
+
+  <h2>4. Quiz Usage</h2>
+  <p>
+    All quizzes and MCQ tests on MNotesHub are free to use for personal and non-commercial purposes only. 
+    Redistribution, resale, or commercial use of these materials is not permitted.
+  </p>
+
+  <h2>5. Third-Party Content</h2>
+  <p>
+    Some content may be sourced or inspired from publicly available educational materials. 
+    If you are a rightful owner and wish to request removal or credit, please contact us.
+  </p>
+
+  <h2>6. Contact</h2>
+  <p>
+    For any concerns regarding privacy or content, you can contact us at:
+    <br><br>
+    📧 meghalayanoteshub@gmail.com
+  </p>
+
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>© 2026 MNotesHub. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  let sidebar = document.getElementById("sidebar");
+  sidebar.style.left = (sidebar.style.left === "0px") ? "-260px" : "0px";
+}
+
+/* Dark Mode */
+const toggleBtn = document.getElementById("themeToggle");
+
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark");
+  toggleBtn.textContent = "☀️";
+}
+
+toggleBtn.onclick = () => {
+  document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+    toggleBtn.textContent = "☀️";
+  } else {
+    localStorage.setItem("theme", "light");
+    toggleBtn.textContent = "🌙";
+  }
+};
+</script>
+
+</body>
+</html>
